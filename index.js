@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const prefix = process.env.prefix;
 const discordToken = process.env.discordToken;
 const weatherAPIKey = process.env.weatherAPIKey;
+const environment = process.env.environment;
 const fetch = require('node-fetch');
 
 client.once('ready', () => {
@@ -21,6 +22,11 @@ client.on('message', async message => {
     
     if (message.content === '!ping') {
         message.channel.send('Pong! 🏓');
+        return;
+    }
+
+    if (message.content === '!env') {
+        message.channel.send(environment);
         return;
     }
 
