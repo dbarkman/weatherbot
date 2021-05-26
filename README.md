@@ -10,6 +10,7 @@ If the airport is in the United States, the temp is given in Farenhiet, otherwis
 If the airport is in the US, you can use a three digit airport code, since all US airports start with "K", otherwise, you must use a four digit code.
 
 Todo:
+* change main command to !wx, then subcommands for t (temprature), cc (current conditions), ww (watches & warnings), docs (instructions)
 * add more weather functionality, current conditions, etc
 * add the current weather icon png
 * add ability to let a user set their airport for the server, e.g. !temp:@cybler and get the temp for KFFZ
