@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 const fs = require('fs');
-
+ 
 const prefix = process.env.prefix;
 const discordToken = process.env.discordToken;
 
