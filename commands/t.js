@@ -7,13 +7,13 @@ module.exports = {
 	name: 't',
 	description: 'Fetch the current temperature for the provided airport.',
 	async execute(message, args) {
-        var airport = args[0];
+        let airport = args[0];
         if (airport.length == 3) airport = 'k' + airport;
     
         const { location, current } = await fetch('http://api.weatherapi.com/v1/current.json?key=' + weatherAPIKey + '&q=metar:' + airport).then(response => response.json());
-        var currentTemp = current.temp_f;
-        var tempFormat = '℉';
-        var forUS = '';
+        let currentTemp = current.temp_f;
+        let tempFormat = '℉';
+        let forUS = '';
         if (location.country !== 'United States') {
             currentTemp = current.temp_c;
             tempFormat = '℃';
