@@ -2,7 +2,7 @@ const weatherAPIKey = process.env.weatherAPIKey;
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+ 
 module.exports = {
 	name: 'c',
 	description: 'Fetch the current conditions for the provided airport.',
